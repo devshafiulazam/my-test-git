@@ -1,0 +1,123 @@
+Website
+github.com 
+
+Download Git Bash
+git-scm.com/download/win 
+
+
+Git Version Check
+git --version
+
+
+Git Settings
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com" 
+git config --list 
+
+
+Folder Position and File for Git
+Desktop => Documents =>  my-test-git => my-test-git.txt 
+
+Bash Access
+my-test-git Folder => Right Click => Open Git Bash here 
+
+Now Start
+
+git init 
+git status
+git add my-test-git.txt
+git commit -m "Version 1: Added initial notes"
+
+
+
+
+github.com => Login => New repository => Repository name(my-first-project)
+           => Public / Private (Don't Touch Now at Add a README File)
+           => Create repository
+
+      Quick setup => (https://github.com/your-username/my-first-project.git)
+
+echo "# my-test-git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/devshafiulazam/my-test-git.git
+git push -u origin main
+
+
+
+# 2nd Time (add . means all file and auto)
+git add .
+git commit -m "Version 2: Updated notes"
+git push (2nd Time Use)
+
+
+
+Version History Checking
+git log --oneline
+git diff
+git checkout -- my-test-git.txt
+git revert a1b2c3d
+
+(For Stop :wq  (Enter) or Esc + q!)
+
+
+
+Branch
+git branch
+git checkout -b new-feature
+git add .
+git commit -m "Added new feature line"
+git push -u origin branch-name
+
+git checkout main 
+git push -u origin branch-name
+
+
+Merge
+git merge new-feature
+git branch -d new-feature
+[ git switch main
+  git pull origin main ]
+
+git merge feature-login
+git push origin main
+
+
+Settings -> Collaborators (Collaborators and teams) -> Add people
+
+
+git clone https://github.com/username/repository-name.git
+cd repository-name
+
+Never use main branch
+git switch -c feature-dashboard
+git add .
+git commit -m "Build dashboard UI"
+git push -u origin feature-dashboard
+
+
+Regular Update
+git switch main
+git pull origin main
+git switch -c new-feature
+
+Settings -> Branches -> Add branch protection rule চালু করে main ব্রাঞ্চে সরাসরি পুশ বন্ধ রাখতে পারেন
+টিম ওয়ার্কের ৩টি গোল্ডেন রুল
+সরাসরি main-এ পুশ করবেন না: GitHub-এর Settings -> Branches -> Add branch protection rule চালু করে main ব্রাঞ্চে সরাসরি পুশ বন্ধ রাখতে পারেন।
+ছোট ছোট PR তৈরি করুন: একসাথে হাজার লাইনের কোড না পাঠিয়ে ছোট ছোট ফিচার অনুযায়ী Pull Request পাঠান, এতে রিভিউ করা সহজ হয় এবং Merge Conflict কম হয়।
+.gitignore ঠিক রাখুন: পিসির লোকাল এনভায়রনমেন্ট ফাইল (.env, __pycache__/, node_modules/ ইত্যাদি) কখনোই পুশ করবেন না।
+
+
+অপ্রয়োজনীয় বা গোপন ফাইল লুকানো (.gitignore)
+
+Open Folder -> Save 
+Plaintext
+secret.txt
+*.log
+temp-folder/
+
+git clone https://github.com/your-username/my-first-project.git
+
+
